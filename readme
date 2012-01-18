@@ -1,0 +1,5 @@
+the logger plugin for jQuery want to solve two problem:
+ 1) unify the log way, and no issue happen on lower browser 
+ 2) have a filter feature, set a log level, other lower level log do not show up, so we focus on the level we want.
+ 
+ 
