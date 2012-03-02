@@ -1,39 +1,39 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <style>
-    </style>
-</head>
-<body>
-<div>
-  <span id="mysp" style="display:block;cursor:pointer;" >Click me, it works under IE6?</span>
-</div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="lib/logging.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-     // $.Logger.setLevel(0);
-    var log=$.getLogger("ali.ux.wxb");
-      log.info("I am info",log);
-      log.log("I am log","yes, u are right!");
-      log.debug("I am debug","yes, u are right!");
-      log.warn("I am warn","yes, u are right!");
-      log.error("I am error","yes, u are right!");
-      
-      
-      
-      log=$.getLogger("ali.ux.wxbsssssssssssss");
-      log.info("I am info",log);
-      log.log("I am log","yes, u are right!");
-      log.debug("I am debug","yes, u are right!");
-      log.warn("I am warn","yes, u are right!");
-      log.error("I am error","yes, u are right!");
-    $('span').click(function(){alert('works');});
-});
+    <head>
+        <title></title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div>
+            <span id="mysp" style="display:block;cursor:pointer;" >Click me, it works under IE6?</span>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/logging.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // $.Logger.setLevel(0);
+                $.Logger.setFilter('ali.ux.wxbsssssssssssss'); (function() {
+                    var log = $.getLogger("ali.ux.wxb");
+                    log.info("I am info", log);
+                    log.log("I am log", "yes, u are right!");
+                    log.debug("I am debug", "yes, u are right!");
+                    log.warn("I am warn", "yes, u are right!");
+                    log.error("I am error", "yes, u are right!");
+                })(); (function() {
+                    var log = $.getLogger("ali.ux.wxbsssssssssssss");
+                    log.info("I am info", log);
+                    log.log("I am log", "yes, u are right!");
+                    log.debug("I am debug", "yes, u are right!");
+                    log.warn("I am warn", "yes, u are right!");
+                    log.error("I am error", "yes, u are right!");
+                })();
+                $('span').click(function() {
+                    alert('works');
+                });
+            });
 
-
-</script>
-
-</body>
+        </script>
+    </body>
 </html>
